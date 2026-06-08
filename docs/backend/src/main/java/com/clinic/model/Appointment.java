@@ -3,6 +3,8 @@ package com.clinic.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import java.time.LocalDateTime;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Future;
 
 @Entity
 public class Appointment {
@@ -17,6 +19,7 @@ public class Appointment {
     @ManyToOne
     private Patient patient;
 
+    @NotNull
     @Future
     private LocalDateTime appointmentTime;
 
